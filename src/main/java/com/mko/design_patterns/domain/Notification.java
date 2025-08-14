@@ -1,19 +1,26 @@
 package com.mko.design_patterns.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.mko.design_patterns.strategy.NotificationStrategy;
 
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Notification {
+public abstract class Notification {
 	
 	private String message;
+	private NotificationStrategy strategy;
+	
+	public Notification() {}
+	
+	public Notification(String message, NotificationStrategy strategy) {
+		this.message = message;
+		this.strategy = strategy;
+	}
 
-	public void send() {
-		System.out.println(this.message);
+	public abstract void send();
+
+	public NotificationStrategy getStrategy() {
+		return strategy;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 }
