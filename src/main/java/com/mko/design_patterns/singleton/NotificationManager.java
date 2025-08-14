@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mko.design_patterns.domain.NotificationType;
-import com.mko.design_patterns.singleton.oberver.NotificationObserver;
+import com.mko.design_patterns.oberver.NotificationObserver;
 
 public class NotificationManager {
 

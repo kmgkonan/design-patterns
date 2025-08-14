@@ -1,4 +1,4 @@
-package com.mko.design_patterns.singleton.oberver;
+package com.mko.design_patterns.oberver;
 
 import com.mko.design_patterns.domain.NotificationType;
 
